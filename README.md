@@ -1,2 +1,3 @@
 # github-pratice
-HTML - Winter2026
+
+Hello World! I'm learning about version control and Github
