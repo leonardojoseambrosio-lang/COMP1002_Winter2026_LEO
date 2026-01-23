@@ -17,9 +17,9 @@
           }
 
           input[type="radio"] {
-               display:inline ;
+               display:inline-block ;
                 margin-top: .3rem;
-                margin-left: 1.8rem;
+                margin-left: .3rem;
                 margin-bottom: 1rem; 
           }
 
@@ -35,11 +35,6 @@
                margin-left: 1.75rem; 
           }
 
-          label[for="gender"] {
-               display:block; 
-               margin-top: 1.25rem;
-          }
-
           select {
                display:block;
                margin-left: 3.25rem; 
@@ -49,6 +44,12 @@
                display:block;
                margin-top: .5rem;
                margin-left: 3.25rem; 
+          }
+
+                    p {
+               display:block; 
+               margin-top: .8rem;
+               margin-left: 1.75rem; 
           }
      </style>
 
@@ -61,28 +62,27 @@
         <!--USER ACCOUNT - basic information to create the account-->
         <fieldset>
             <legend>USER ACCOUNT</legend>
-            <p>Fields with <font color="E30E0E">*</font> are required</p><!--* in red to get user's attention-->
+            <p>Fields with (*) are required</p><!--* in red to get user's attention-->
                 
                 <!--Full Name-->
-                <label for="fullName">Full Name:<font color="E30E0E">*</font>  
-                    <input type="text" name="fullName" id="fullName" required></input>
+                <label for="fullName">Full Name:(*)
+                    <input type="text" name="fullName" id="fullName" required>
                 </label>
                 
 
                 <!--Email Address-->
-                <label for="emailAddress">Email Address:<font color="E30E0E">*</font>
-                    <input type="email" name="emailAddress" id="emailAddress" placeholder="example@domain.com">
+                <label for="emailAddress">Email Address:(*)
+                    <input type="email" name="emailAddress" id="emailAddress" placeholder="example@domain.com" required>
                 </label>
                 
 
                 <!--Password-->
-                <label for="password">Password:<font color="E30E0E">*</font>
-                    <input type="password" name="password" id="password" title="The password must be at least 8 characters long
-                    including an uppercase letter, 
-                    a lowercase letter, 
-                    at least 3 numbers, 
-                    and a special character. 
-                    Spaces are allowed." pattern="^(?=.*[a-z])(?=.*[A-Z])(?=(?:.*\d){3,})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                <label for="password">Password:(*)
+                    <input type="password" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=(?:.*\d){3,})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                    <small>
+                        The password must be at least 8 characters long including an uppercase letter, 
+                        a lowercase letter, at least 3 numbers, and a special character. Spaces are allowed.
+                    </small>
                 </label>
                 <!--Confirm Password-->
                 <label for="confirm_password">Confirm Your Password:
@@ -96,15 +96,30 @@
                 <legend>ADDITIONAL INFORMATION</legend>
                
                     <!--Birth of Date-->
-                    <label for="birth">Date of Birth:<font color="E30E0E">*</font>
-                    <input type="date" name="birth" id="birth" required></input>
+                    <label for="birth">Date of Birth:(*)
+                    <input type="date" name="birth" id="birth" required>
                     </label>
 
                     <!--Gender-->
-                    <label for="gender">Gender:</label>
-                    <input type="radio" name="gender" id="gender">Male</input>
-                    <input type="radio" name="gender" id="gender">Female</input>
-                    <input type="radio" name="gender" id="gender">Other</input>
+                    <p>Gender:</p>
+                    
+                    <label>
+                        <input type="radio" name="gender" id="male" value="male" required>
+                        Male
+                    </label>
+                    
+                    
+                    <label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        Female
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="gender" id="other" value="other">
+                        Other
+                    </label>
+                    
+
 
                     <!--Country-->
                     <label for="country">Country:</label>
@@ -123,21 +138,16 @@
                     <textarea name="aboutMe" id="aboutMe" placeholder="Here you can share any aditional information..." rows="4" cols="50"></textarea>
                     
                     <!--Terms and Conditions-->
-                    <input type="checkbox" name="agreement" id="agreement" title="Please agree to the Terms and Conditions to proceed." required>I agree to the <font color="blue"><i><u>Terms and Conditions</u></i></fonte></input>
-                    <font color="E30E0E">*</font>
+                    <label>
+                    <input type="checkbox" name="agreement" id="agreement" title="Please agree to the Terms and Conditions to proceed." required> I agree to the Terms and Conditions(*)
+                    </label>
                     
                     <!--Submit Button-->
-                    <input type="submit" value="Submit Form">
+                    <input type="submit" value="Submit">
 
             </fieldset>
 
-
-                
-
-                
-        
-    
-    
+   
     </form>
 
 
