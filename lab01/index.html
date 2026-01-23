@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Lab One - Form</title>
+    
+    <style>
+          input {
+               display:block;
+               margin-left: 1.5rem; 
+          }
+
+          input[type="submit"] {
+               margin-top: 1rem; 
+          }
+
+          input[type="radio"] {
+               display:inline ;
+                margin-top: .3rem;
+                margin-left: 1.8rem;
+                margin-bottom: 1rem; 
+          }
+
+          input[type="checkbox"] {
+               display:inline-block;
+               margin-top: 2rem;
+               margin-left: 1.5rem;
+          }
+
+          label {
+               display:block; 
+               margin: .4rem;
+               margin-left: 1.75rem; 
+          }
+
+          label[for="gender"] {
+               display:block; 
+               margin-top: 1.25rem;
+          }
+
+          select {
+               display:block;
+               margin-left: 3.25rem; 
+          }
+
+          textarea {
+               display:block;
+               margin-top: .5rem;
+               margin-left: 3.25rem; 
+          }
+     </style>
+
+
+</head>
+<body>
+    <h1>User Registration Form</h1>
+
+    <form method="post" action="">
+        <!--USER ACCOUNT - basic information to create the account-->
+        <fieldset>
+            <legend>USER ACCOUNT</legend>
+            <p>Fields with <font color="E30E0E">*</font> are required</p><!--* in red to get user's attention-->
+                
+                <!--Full Name-->
+                <label for="fullName">Full Name:<font color="E30E0E">*</font>  
+                    <input type="text" name="fullName" id="fullName" required></input>
+                </label>
+                
+
+                <!--Email Address-->
+                <label for="emailAddress">Email Address:<font color="E30E0E">*</font>
+                    <input type="email" name="emailAddress" id="emailAddress" placeholder="example@domain.com">
+                </label>
+                
+
+                <!--Password-->
+                <label for="password">Password:<font color="E30E0E">*</font>
+                    <input type="password" name="password" id="password" title="The password must be at least 8 characters long
+                    including an uppercase letter, 
+                    a lowercase letter, 
+                    at least 3 numbers, 
+                    and a special character. 
+                    Spaces are allowed." pattern="^(?=.*[a-z])(?=.*[A-Z])(?=(?:.*\d){3,})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                </label>
+                <!--Confirm Password-->
+                <label for="confirm_password">Confirm Your Password:
+                    <input type="password" name="confirm_password" id="confirm_password" required>
+                </label>
+            </fieldset>
+
+
+                <!--Adicional Information-->
+            <fieldset>
+                <legend>ADDITIONAL INFORMATION</legend>
+               
+                    <!--Birth of Date-->
+                    <label for="birth">Date of Birth:<font color="E30E0E">*</font>
+                    <input type="date" name="birth" id="birth" required></input>
+                    </label>
+
+                    <!--Gender-->
+                    <label for="gender">Gender:</label>
+                    <input type="radio" name="gender" id="gender">Male</input>
+                    <input type="radio" name="gender" id="gender">Female</input>
+                    <input type="radio" name="gender" id="gender">Other</input>
+
+                    <!--Country-->
+                    <label for="country">Country:</label>
+                        <select name="country" id="country">
+                            <option value="">Select Your Country</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Canada">Canada</option>
+                            <option value="USA">United States of America</option>
+                            <option value="France">France</option>
+                            <option value="Italia">Italia</option>
+                            <option value="Japan">Japan</option>
+                        </select>
+
+                    <!--About Me-->
+                    <label for="aboutMe">About Me:</label>
+                    <textarea name="aboutMe" id="aboutMe" placeholder="Here you can share any aditional information..." rows="4" cols="50"></textarea>
+                    
+                    <!--Terms and Conditions-->
+                    <input type="checkbox" name="agreement" id="agreement" title="Please agree to the Terms and Conditions to proceed." required>I agree to the <font color="blue"><i><u>Terms and Conditions</u></i></fonte></input>
+                    <font color="E30E0E">*</font>
+                    
+                    <!--Submit Button-->
+                    <input type="submit" value="Submit Form">
+
+            </fieldset>
+
+
+                
+
+                
+        
+    
+    
+    </form>
+
+
+</body>
+</html>
