@@ -1,0 +1,97 @@
+        /*I used as base the color blue*/
+        
+        /*Arial font and an almost white blue color*/
+        body{
+            background-color: rgb(211, 232, 249);
+            font-family: Arial;
+
+        }
+
+        
+        h1{
+          font-size: 60px;
+          color: rgb(2, 46, 71);
+          margin-left: 120px;
+        }
+
+        /*Attributes for fieldset, legend, label, and input*/      
+          fieldset{
+            background-color:rgb(225, 242, 255) ;
+            max-width: 700px;
+            margin-left: 200px;
+
+          }
+
+          legend{
+            font-family: Arial;
+            font-weight: bold;
+            color:rgb(11, 11, 84);
+          }
+
+          label {
+               display:block; 
+               margin: .4rem;
+               margin-left: 2rem;
+               width: 300px;
+          }
+
+        input {
+               display:block;
+               margin-left: 1.5rem;
+               border: solid rgb(11, 11, 84);
+               border-radius: 6px; 
+               width: 300px;
+               padding: 2px;
+          }
+
+          /*Different types of input, they can't have the same attributes for general input*/
+          input[type="submit"] {
+               margin-top: 1rem; 
+          }
+
+          input[type="date"] {
+               display:block;
+               margin-top: 2rem;
+               margin-left: 1.5rem;
+               width: 106px;       
+          }
+
+          input[type="radio"] {
+               display:inline-block ;
+                margin-top: .3rem;
+                margin-left: .3rem;
+                margin-bottom: 1rem;
+                width: 30px;
+          }
+
+          input[type="checkbox"] {
+               display:inline-block;
+               margin-top: 2rem;
+               margin-left: 1.5rem;
+               width: 30px;               
+            }
+
+
+            /*Defition for select tag*/            
+          select {
+               display:block;
+               margin-left: 3.25rem; 
+          }
+
+          /*this main goal is create a size dor textarea*/
+
+          textarea {
+               display:block;
+               margin-top: .5rem;
+               margin-left: 3.25rem;
+               width: 360px;
+               height: 100px;
+          }
+
+
+          /*some attributes for paragraph to create a pattern*/
+        p {
+               display:block; 
+               margin-top: .8rem;
+               margin-left: 1.75rem; 
+          }

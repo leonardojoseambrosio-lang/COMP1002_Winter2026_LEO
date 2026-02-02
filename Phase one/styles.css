@@ -1,0 +1,45 @@
+/*Elements selector*/
+
+/*H1 Styles*/
+h1 {
+  font-family: "Comic Sans MS",Arial, sans-serif;
+  font-size: 4rem;
+  display: flex;
+  margin: 0px;
+  gap: 30px;
+  padding: 20px;
+}
+
+body{
+  font-family:"Comic Sans MS",Arial, sans-serif;
+}
+
+section{
+  border: 10px solid black;
+  margin: 20px 20px 20px 20px;
+  padding: 20px;
+}
+
+/*Descendeant Selector*/
+
+/*anchor link style*/
+nav ul li{
+  font-size: 24px;
+  list-style: none;
+  display: inline;
+  margin-right: 25px;
+}
+
+
+/*Class selector*/
+
+.profile-img {
+  display:block;
+  margin-left: 600px;
+  max-width: 360px;
+  height: auto;
+  transform: rotate(25deg);
+  padding-top: 60px;
+}
+
+
