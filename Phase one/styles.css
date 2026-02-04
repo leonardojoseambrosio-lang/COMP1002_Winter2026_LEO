@@ -1,33 +1,153 @@
+/*I tried to create a comic book style*/
+
+/*set default body font and background*/
+body{
+  font-family:"Comic Sans MS",Arial, sans-serif;
+  background-image: url("images/itcomics.jpg");
+}
+
 /*Elements selector*/
+
+/*top navigation base style*/
+/*anchor link style*/
+nav ul{
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding:0;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li{
+  display:inline-block;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+nav ul li a{
+  display: inline-block;
+  font-size: 24px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.89);
+  border: solid 5px;
+  margin: 10px;
+  padding: 8px;
+}
+
+/*class selector hover for each nav*/
+.top-nav-1:hover a{
+  background-color: rgba(254, 36, 2, 0.751);
+  border: solid 7px black;
+}
+.top-nav-2:hover a{
+  background-color: rgba(2, 187, 254, 0.751);
+  border: solid 7px black;
+}
+.top-nav-3:hover a{
+  background-color: rgba(254, 141, 2, 0.751);
+  border: solid 7px black;
+}
+
 
 /*H1 Styles*/
 h1 {
-  font-family: "Comic Sans MS",Arial, sans-serif;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.89);
+  border: solid 10px black;
   font-size: 4rem;
-  display: flex;
-  margin: 0px;
-  gap: 30px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  max-width: 50%;
 }
 
-body{
-  font-family:"Comic Sans MS",Arial, sans-serif;
-}
 
 section{
-  border: 10px solid black;
-  margin: 20px 20px 20px 20px;
+  border: 8px solid black;
+  box-shadow: 0 0 0 5px white, 0 0 0 16px black;
+  margin: 20px;
   padding: 20px;
+  overflow-wrap: break-word;
 }
 
-/*Descendeant Selector*/
+/*ID's for each section (manipulating margin and background::before to opacity)*/
 
-/*anchor link style*/
-nav ul li{
-  font-size: 24px;
-  list-style: none;
-  display: inline;
-  margin-right: 25px;
+#aboutme {
+  width: 70%;
+  margin: 20px auto;
+  position: relative;/*related with before::*/
+  padding: 20px;
+  box-sizing: border-box;
+  }
+#aboutme::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(254, 99, 2, 0.958); /*controling opacity*/
+  z-index: -1;
+}
+
+#education{
+  width: 50%;
+  margin: 20px auto;
+  position: relative;/*related with before::*/
+  padding: 20px;
+  box-sizing: border-box;
+}
+#education::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 208, 254, 0.958); /*controling opacity*/
+  z-index: -1;
+}
+
+#skills{
+  width: 70%;
+  margin: 20px auto;
+  position: relative;/*related with before::*/
+  padding: 20px;
+  box-sizing: border-box;
+}
+#skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(254, 52, 2, 0.958); /*controling opacity*/
+  z-index: -1;
+}
+
+#workexperience{
+  width: 60%;
+  margin: 20px auto;
+  position: relative;/*related with before::*/
+  padding: 20px;
+  box-sizing: border-box;
+}
+#workexperience::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(254, 99, 2, 0.958); /*controling opacity*/
+  z-index: -1;
+}
+
+#contact{
+  width: 90%;
+  margin: 20px auto;
+  position: relative;/*related with before::*/
+  padding: 20px;
+  box-sizing: border-box;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 254, 2, 0.958); /*controling opacity*/
+  z-index: -1;
 }
 
 
@@ -35,7 +155,7 @@ nav ul li{
 
 .profile-img {
   display:block;
-  margin-left: 600px;
+  margin: 50px auto 40px;
   max-width: 360px;
   height: auto;
   transform: rotate(25deg);
