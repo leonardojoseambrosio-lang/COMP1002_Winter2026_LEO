@@ -13,6 +13,7 @@ body{
 nav ul{
   display: flex;
   flex-wrap: nowrap;
+  overflow-wrap: break-word;
   margin: 0;
   padding:0;
   list-style: none;
@@ -54,9 +55,10 @@ nav ul li a{
 
 /*H1 Styles*/
 h1 {
-  display: block;
   background-color: rgba(255, 255, 255, 0.89);
   border: solid 10px black;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
   font-size: 4rem;
   margin: 10px;
   padding: 10px;
