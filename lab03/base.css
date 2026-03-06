@@ -1,0 +1,151 @@
+/* BASE.CSS
+   This file NEVER changes.
+   It contains only visual styling — not layout systems.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f7fb;
+  color: #111;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #dfe3ea;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.site-header {
+  background: #111;
+  color: white;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav a {
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.site-footer {
+  background: #111;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #dfe3ea;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+/* Layout */ 
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem auto;
+}
+
+/* Your Code Here! */ 
+.cards{
+  /*Make this cointainer a grid*/
+  display: grid;
+  /*Create 3 equal columns, each taking 1 fraction of available width*/
+  grid-template-columns: repeat(3, 1fr);
+  /*Set a gap between both rows and columns*/
+  gap: 1rem;
+}
+
+/*Modern Selector - Select the first card inside the container*/
+.card:first-child{
+/*Start at line 1 and End at line 4 (Span 3 columns)*/
+grid-column: 1/4;
+}
+
+
+
+/*Modern Selector - Select the 5th card inside the container*/
+.card:nth-child(5){
+/*Start at line 1 and End at line 3 (Span 2 columns)*/
+  grid-column: 1/3;
+}
+
+
+/* Bonus Challenge - 2 EXTRA marks */ 
+/* make the layout responsive & mobile first design */ 
+@media(max-width: 800px){
+
+body {
+  /*Increase font-size on smaller screens*/
+  font-size: 1.3rem;
+}
+
+.layout{
+  display: grid;
+  /*Adjust columns for smaller screens */
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin: 1rem auto;
+}
+
+.cards{
+  /*Make this cointainer a grid*/
+  display: grid;
+  /*Create 2 equal columns, each taking 1 fraction of available width*/
+  grid-template-columns: repeat(2, 1fr);
+  /*Set a gap between both rows and columns*/
+  gap: 0.5rem;
+}
+
+/*Modern Selector - Select the first card inside the container*/
+.card:first-child{
+/*Start at line 1 and End at line 3 (Span 2 columns)*/
+grid-column: 1/3;
+}
+
+
+
+/*Modern Selector - Select the 5th card inside the container*/
+.card:nth-child(5){
+/*Reset grid-column to auto on small screens*/
+/*Ensure cards occupy one column on smaller screens*/
+  grid-column: auto;
+}
+
+
+}

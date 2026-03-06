@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Lab Two - Form</title>
+    
+    <!--Link to external Style Sheet-->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>User Registration Form</h1>
+
+    <form method="post" action="">
+        <!--USER ACCOUNT - basic information to create the account-->
+        <fieldset>
+            <legend>USER ACCOUNT</legend>
+            <p>Fields with (*) are required</p><!--Symbol (*) to get user's attention-->
+                
+                <!--Full Name-->
+                <label for="fullName">Full Name:(*)
+                    <input type="text" name="fullName" id="fullName" required>
+                </label>
+                
+
+                <!--Email Address-->
+                <label for="emailAddress">Email Address:(*)
+                    <input type="email" name="emailAddress" id="emailAddress" placeholder="example@domain.com" required>
+                </label>
+                
+
+                <!--Password-->
+                <label for="password">Password:(*)
+                    <input type="password" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=(?:.*\d){3,})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                    <small>
+                        The password must be at least 8 characters long including an uppercase letter, 
+                        a lowercase letter, at least 3 numbers, and a special character. Spaces are allowed.
+                    </small>
+                </label>
+                <!--Confirm Password-->
+                <label for="confirm_password">Confirm Your Password:
+                    <input type="password" name="confirm_password" id="confirm_password" required>
+                </label>
+            </fieldset>
+
+
+                <!--Adicional Information-->
+            <fieldset>
+                <legend>ADDITIONAL INFORMATION</legend>
+               
+                    <!--Birth of Date-->
+                    <label for="birth">Date of Birth:(*)
+                    <input type="date" name="birth" id="birth" required>
+                    </label>
+
+                    <!--Gender-->
+                    <p>Gender:</p>
+                    
+                    <label>
+                        <input type="radio" name="gender" id="male" value="male" required>
+                        Male
+                    </label>
+                    
+                    
+                    <label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        Female
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="gender" id="other" value="other">
+                        Other
+                    </label>
+                    
+
+
+                    <!--Country-->
+                    <label for="country">Country:</label>
+                        <select name="country" id="country">
+                            <option value="">Select Your Country</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Canada">Canada</option>
+                            <option value="USA">United States of America</option>
+                            <option value="France">France</option>
+                            <option value="Italia">Italia</option>
+                            <option value="Japan">Japan</option>
+                        </select>
+
+                    <!--About Me-->
+                    <label for="aboutMe">About Me:</label>
+                    <textarea name="aboutMe" id="aboutMe" placeholder="Here you can share any aditional information..." rows="4" cols="50"></textarea>
+                    
+                    <!--Terms and Conditions-->
+                    <label>
+                    <input type="checkbox" name="agreement" id="agreement" title="Please agree to the Terms and Conditions to proceed." required> I agree to the Terms and Conditions(*)
+                    </label>
+                    
+                    <!--Submit Button-->
+                    <input type="submit" value="Submit">
+
+            </fieldset>
+
+   
+    </form>
+
+
+</body>
+</html>
