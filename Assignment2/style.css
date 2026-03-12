@@ -1,0 +1,309 @@
+/* 
+COMP1002 Assignment 2
+Layout recreated using CSS Grid and Flexbox (no Bootstrap)
+
+Student: Leonardo Jose Ambrosio
+ID: 200657215
+*/
+
+:root{
+/*screen color*/
+--color-screen: #1b1b1b;
+/*orange colors*/
+--color-orange_device: #e78f0b;
+--color-orange_device_light-effect: #ff7733;
+--orange-font: #ffd59a;
+
+/*gray colors*/
+--background-labelledby: #323131;
+--text-gray: #c3ccdc;
+
+/*blue colors*/
+--color-button: #000000;
+--color-button_hover:#f5894a;
+
+--hover-color: #efefef;
+--hover-text-shadow:0px 5px 15px#fbfafa; 
+
+}
+
+/*####RESET AND BASE STYLES####*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text-gray);
+    background-color: var(--color-screen);
+}
+
+/* Links */
+a {
+    color: var(--text-gray);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+a:hover {
+    text-decoration: none;
+}
+
+/*#####HEADER / NAVIGATION######*/
+header {
+    position: fixed; /* Keep header at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex; /* Use flexbox for nav items */
+    justify-content: center; /* Center links horizontally */
+    align-items: center; /* Align links vertically */
+    gap: 20px;
+    padding: 15px 0;
+}
+
+header nav a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+header nav a:hover {
+    color: var(--hover-color);
+    text-shadow: var(--hover-text-shadow);
+}
+
+/* #######HERO SECTION######*/
+section[aria-labelledby="hero-title"] {
+    display: grid; /* Use grid to center content */
+    place-items: center; /* Center content both horizontally and vertically */
+    text-align: center;
+    min-height: 90vh;
+    gap: 25px;
+    padding: 120px 20px 60px; /* Adjust padding to account for fixed header */
+    background-color: var(--background-labelledby);
+    color: var(--orange-font);
+}
+
+/* Hero text */
+section[aria-labelledby="hero-title"] h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+section[aria-labelledby="hero-title"] p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* Hero button */
+section[aria-labelledby="hero-title"] p a {
+    display: inline-block;
+    margin-bottom: 0.7rem;
+    padding: 12px 25px;
+    background-color: var(--color-button);
+    color: var(--text-gray);
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+section[aria-labelledby="hero-title"] p a:hover {
+    box-shadow: 0px 0px 10px 10px var(--color-button_hover);
+    transform: translateY(-2px);
+}
+
+/* Hero device/phone simulation */
+.device {
+    display: grid;
+    place-items: center;
+    width: 230px;
+    height: 400px;
+    background-color: var(--color-orange_device);
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px 10px var(--color-orange_device_light-effect);
+}
+
+/* Hero device screen */
+.device .screen {
+    width: 90%;
+    height: 90%;
+    margin-bottom: 3%;
+    background-color: var(--color-screen);
+    border-radius: 20px;
+}
+
+/*###PRODUCT HIGHLIGHTS GRID###*/
+section[aria-label="Product highlights"] {
+    display: grid; /* Grid layout for product cards */
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    margin: 1rem;
+    background-color: var(--color-screen);
+    color: var(--text-gray);
+}
+
+section[aria-label="Product highlights"] article {
+    display: grid; /* Grid inside each card for spacing */
+    margin: 0.5rem;
+    padding-top: 1rem;
+    gap: 1rem;
+    text-align: center;
+    place-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--color-screen);
+}
+
+section[aria-label="Product highlights"] article h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+section[aria-label="Product highlights"] article p {
+    font-size: 1rem;
+}
+
+/*Highlights device/phone simulation */
+div[aria-label="Product image placeholder"] {
+    display: grid;
+    place-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0px;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4 / 3;
+    border-radius: 30px 30px 0px 0px;
+}
+
+/* Highlights device screen simulation */
+.screen_highlights {
+    width: 90%;
+    height: 91%;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: 8%;
+    margin-bottom: 0px;
+    background-color: var(--color-screen);
+    
+}
+
+
+/*diverse colors for Product Highlights*/
+section[aria-label="Product highlights"] article:nth-child(1) div[aria-label="Product image placeholder"]{
+    background-color: #0707ec;
+    box-shadow: 0px -16px 20px 12px #3d3deb;
+}
+
+section[aria-label="Product highlights"] article:nth-child(2) div[aria-label="Product image placeholder"]{
+    background-color: #07ec76;
+    box-shadow: 0px -16px 20px 12px #3deb9a;
+}
+
+section[aria-label="Product highlights"] article:nth-child(3) div[aria-label="Product image placeholder"]{
+    background-color: #7207ec;
+    box-shadow: 0px -16px 20px 12px #6e3deb;
+
+}
+section[aria-label="Product highlights"] article:nth-child(4) div[aria-label="Product image placeholder"]{
+    background-color: #ddec07;
+    box-shadow: 0px -16px 20px 12px #ece86d;
+}
+
+section[aria-label="Product highlights"] article:nth-child(5) div[aria-label="Product image placeholder"]{
+    background-color: #bd0000;
+    box-shadow: 0px -16px 20px 12px #ec0404;
+}
+
+section[aria-label="Product highlights"] article:nth-child(6) div[aria-label="Product image placeholder"]{
+    background-color: #ec07cd;
+    box-shadow: 0px -16px 20px 12px #eb3dc0;
+}
+
+section[aria-label="Product highlights"] article:nth-child(7) div[aria-label="Product image placeholder"]{
+    background-color: #07cdca;
+    box-shadow: 0px -16px 20px 12px #3debe2;
+}
+
+section[aria-label="Product highlights"] article:nth-child(8) div[aria-label="Product image placeholder"]{
+    background-color: #878787;
+    box-shadow: 0px -16px 20px 12px #dddfde;
+}
+/*END of diverse colors for Product Highlights*/
+
+
+/* Hover effect for product cards */
+section[aria-label="Product highlights"] article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 30px #ffffffbf;
+}
+
+
+/*####FOOTER STYLES#####*/
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--background-labelledby);
+    padding: 60px 20px;
+}
+
+/* Footer copyright */
+footer p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Footer section titles */
+footer h2 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-gray);
+}
+
+/* Footer lists */
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--hover-color);
+    text-shadow: var(--hover-text-shadow);
+}
+
+/*#####RESPONSIVE STYLES#####*/
+@media (max-width: 800px) {
+    /* Single column for product cards on mobile */
+    section[aria-label="Product highlights"] {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make nav wrap on small screens */
+    header nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* Stack footer columns on small screens */
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
